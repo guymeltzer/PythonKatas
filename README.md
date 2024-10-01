@@ -48,17 +48,17 @@ _Kata_ is a Japanese word (型 or 形) meaning "form". It refers to a detailed c
 - [X] `find_student.py`
 - [X] `is_word_absent.py`
 - [X] `is_valid_password`
-- [ ] `is_earlier.py`
-- [ ] `num_of_digits.py`
-- [ ] `is_palindrome.py`
-- [ ] `has_pattern.py`
+- [X] `is_earlier.py`
+- [X] `num_of_digits.py`
+- [X] `is_palindrome.py`
+- [X] `has_pattern.py`
 
-- [ ] `is_subscriber_matching.py`
-- [ ] `get_first_n_words.py`
-- [ ] `clean_text.py`
-- [ ] `get_user_info.py`
-- [ ] `fraction_of_float.py`
-- [ ] `start_end.py`
+- [X] `is_subscriber_matching.py`
+- [X] `get_first_n_words.py`
+- [X] `clean_text.py`
+- [X] `get_user_info.py`
+- [X] `fraction_of_float.py`
+- [X] `start_end.py`
 - [ ] `verbing.py`
 - [ ] `print_list_elements.py`
 - [ ] `total_expense.py`

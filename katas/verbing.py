@@ -9,6 +9,8 @@ def verbing(word):
     do -> do
     swimming -> swimmingly
     """
+    if len(word) => 3:
+
 
 
 print(verbing('walk'))      # Expected output: teaching

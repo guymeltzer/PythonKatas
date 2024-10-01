@@ -5,7 +5,13 @@ def start_end(text, n, m):
 
     If 'n' or 'm' are invalid (negative or larger than text length), return an empty string.
     """
+    if n < 0 or m < 0 or n > len(text) or m > len(text):
+        return ""
 
+    first_characters = text[0:n]
+    last_characters = text[-m:]
+
+    return first_characters + last_characters
 
 text = 'Elvis has left the building'
 result = start_end(text, 3, 5)
@@ -20,7 +26,7 @@ print(result)  # Expected output: 'Elvisding'
 result = start_end('Pythonista', 4, 3)
 print(result)  # Expected output: 'Pythsta'
 
-result = start_end(text, 25, 1)  # Invalid input (too large)
+result = start_end(text, 27, 1)  # Invalid input (too large)
 print(result)  # Expected output: ''
 
 """

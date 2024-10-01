@@ -1,7 +1,14 @@
+from datetime import datetime
+
 def is_earlier(date1, date2):
     """
     Compares two ISO 8601 date strings and returns True if the first date is earlier than the second date.
     """
+    date1_obj = datetime.strptime(date1, "%Y-%m-%d")
+    date2_obj = datetime.strptime(date2, "%Y-%m-%d")
+
+    # Compare the two datetime objects
+    return date1_obj < date2_obj
 
 
 date1 = "2023-07-29"

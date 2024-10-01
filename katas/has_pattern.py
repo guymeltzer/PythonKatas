@@ -2,7 +2,8 @@ def has_pattern(text):
     """
     Checks if the text contains the specific pattern "abc" at the start.
     """
-
+    sliced_text = text[0:3:1]
+    return sliced_text == "abc"
 
 
 print(has_pattern("abcdef"))  # True, "abc" is at the start

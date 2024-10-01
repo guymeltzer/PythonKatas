@@ -2,6 +2,8 @@ def fraction_of_float(number):
     """
     Returns the fractional part of a given float number.
     """
+    frac = number - int(number)
+    return frac
 
 
 result = fraction_of_float(12.345)
