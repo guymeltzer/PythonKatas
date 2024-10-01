@@ -6,7 +6,8 @@ def get_username(email):
 
     Which means, example.com is the only possible domain
     """
-
+    split_email = email[:email.index('@')]
+    return split_email
 
 email_1 = "alice.smith@example.com"
 print(get_username(email_1))  # "alice.smith" expected

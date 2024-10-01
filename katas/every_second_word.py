@@ -2,7 +2,8 @@ def get_alternate_words(sentence):
     """
     Returns every second word from the given sentence.
     """
-
+    words = sentence.split()
+    return words[1::2]  # Return every second word starting from index 1
 
 sentence_1 = "The quick brown fox jumps over the lazy dog"
 print(get_alternate_words(sentence_1))  # ["quick", "fox", "over", "lazy"] expected

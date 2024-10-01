@@ -2,6 +2,15 @@ def is_valid_password(password):
     """
     Checks if the given password meets the required criteria.
     """
+    if len(password) < 8:
+        return False
+
+    has_upper = any(char.isupper() for char in password)
+    has_lower = any(char.islower() for char in password)
+
+    return has_upper and has_lower
+
+
 
 
 # Test cases

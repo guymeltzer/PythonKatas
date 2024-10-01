@@ -2,7 +2,10 @@ def is_word_absent(text, word):
     """
     Checks if a given word is not present in the provided text.
     """
-
+    if word not in text:
+        return "The word " + word + " is not found in the text"
+    else:
+        return "The word " + word + " is found in the text"
 
 text_content = "The quick brown fox jumps over the lazy dog."
 
