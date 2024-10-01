@@ -93,4 +93,16 @@ _Kata_ is a Japanese word (型 or 形) meaning "form". It refers to a detailed c
 - [ ] `check_identity.py`    
 - [ ] `book_your_seat.py`    
 - [ ] `boarding_pass_code.py`
-- [ ] `process_payment.py`   
+- [ ] `process_payment.py`
+
+
+- [ ] `lets_vote.py`       
+- [ ] `in_the_club.py`     
+- [ ] `top_student.py`     
+- [ ] `mind_the_gap.py`    
+- [ ] `is_sublist.py`      
+- [ ] `runner_position.py` 
+- [ ] `folder_count.py`    
+- [ ] `secret_club.py`     
+- [ ] `dicts_in_order.py`  
+- [ ] `they_legit.py`      
