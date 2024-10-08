@@ -3,6 +3,12 @@ def generate_name_pairs(names):
     This function takes a list of names and returns a list of tuples,
     where each tuple contains all possible pairs of names.
     """
+    pairs = []
+    for i in range(len(names)):
+        for j in range(i + 1, len(names)):
+            pairs.append((names[i], names[j]))
+
+    return pairs
 
 
 

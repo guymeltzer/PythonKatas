@@ -4,7 +4,14 @@ def is_prime(number):
     A prime number is an integer greater than 1 that has no divisors
     other than 1 and itself.
     """
-    for i in range(number):
+    if number <= 1:
+        return False
+    if number == 2:
+        return True
+    for i in range(2, number):
+        if number % i == 0:
+            return False
+        return True
         ...  # TODO complete the loop body
 
 

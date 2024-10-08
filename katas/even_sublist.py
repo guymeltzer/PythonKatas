@@ -5,6 +5,13 @@ def even_sublist(numbers):
     :param numbers: list of integers
     :return: list of even integers
     """
+    param_numbers = []
+    for num in numbers:
+        if num % 2 ==0:
+            param_numbers.append(num)
+    return param_numbers
+
+
 
 
 

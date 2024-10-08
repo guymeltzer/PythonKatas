@@ -6,6 +6,11 @@ def reformat_phone(phone_str):
 
     Return None if the input is invalid (not exactly 10 digits)
     """
+    if phone_str.isdigit() == False:
+
+    if len(phone_str) != 10:
+        return None
+
 
 
 print(reformat_phone("123-456-7890"))  # Expected output: (123) 456-7890

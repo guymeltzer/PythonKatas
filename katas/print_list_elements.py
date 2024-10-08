@@ -3,6 +3,9 @@ def print_list_elements(items):
     Prints each element of the list on a new line.
     """
 
+    for x in elements:
+        print(x)
+
 
 # Example usage
 elements = ["apple", "banana", "cherry"]

@@ -59,22 +59,22 @@ _Kata_ is a Japanese word (型 or 形) meaning "form". It refers to a detailed c
 - [X] `get_user_info.py`
 - [X] `fraction_of_float.py`
 - [X] `start_end.py`
-- [ ] `verbing.py`
-- [ ] `print_list_elements.py`
-- [ ] `total_expense.py`
-- [ ] `min_max.py`
-- [ ] `mailing_list2.py`
-- [ ] `is_prime.py`
-- [ ] `list_diff.py`
-- [ ] `under_18.py`
-- [ ] `even_sublist.py`
-- [ ] `sum_even_numbers.py`
-- [ ] `app_health.py`
-- [ ] `max_difference.py`
-- [ ] `name_pair.py`
-- [ ] `validate_age.py`
+- [X] `verbing.py`
+- [X] `print_list_elements.py`
+- [X] `total_expense.py`
+- [X] `min_max.py`
+- [X] `mailing_list2.py`
+- [X] `is_prime.py`
+- [X] `list_diff.py`
+- [X] `under_18.py`
+- [X] `even_sublist.py`
+- [X] `sum_even_numbers.py`
+- [X] `app_health.py`
+- [X] `max_difference.py`
+- [X] `name_pair.py`
+- [X] `validate_age.py`
 
-- [ ] `is_unique_str.py`     
+- [X] `is_unique_str.py`     
 - [ ] `reformat_phone.py`    
 - [ ] `swap_in_list.py`      
 - [ ] `partial_list.py`      
