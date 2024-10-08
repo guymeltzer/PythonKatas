@@ -75,14 +75,14 @@ _Kata_ is a Japanese word (型 or 形) meaning "form". It refers to a detailed c
 - [X] `validate_age.py`
 
 - [X] `is_unique_str.py`     
-- [ ] `reformat_phone.py`    
-- [ ] `swap_in_list.py`      
-- [ ] `partial_list.py`      
-- [ ] `lottery_guess.py`     
-- [ ] `summarize_scores.py`  
-- [ ] `all_positive.py`      
-- [ ] `long_str.py`          
-- [ ] `currency_convert.py`  
+- [X] `reformat_phone.py`    
+- [X] `swap_in_list.py`      
+- [X] `partial_list.py`      
+- [X] `lottery_guess.py`     
+- [X] `summarize_scores.py`  
+- [X] `all_positive.py`      
+- [X] `long_str.py`          
+- [X] `currency_convert.py`  
 - [ ] `get_department.py'`   
 - [ ] `course_enrollment.py` 
 - [ ] `contacts.py`          

@@ -8,6 +8,14 @@ def lottery_guess(guess):
 
     True if the guess matches the lottery number, False otherwise.
     """
+    random_num = random.randint(1, 10)
+    print(random_num)
+    if guess == random_num:
+        return True
+    else:
+        return False
+
+
 
 
 user_guess = 5  # Example input

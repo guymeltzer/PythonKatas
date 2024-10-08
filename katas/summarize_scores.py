@@ -1,4 +1,4 @@
-def summarize_scores(...):
+def summarize_scores(scores, threshold=50, include_average=True):
     """
     Summarizes the scores based on a given threshold (default is 50). Returns a list of scores
     above the threshold, and optionally includes the average score.

@@ -2,6 +2,12 @@ def convert_currency(amount, from_currency, to_currency, exchange_rates):
     """
     Converts an amount from one currency to another using the provided exchange rates.
     """
+    from_rate = exchange_rates[from_currency]
+    to_rate = exchange_rates[to_currency]
+
+    converted_amount = amount * (to_rate / from_rate)
+
+    return f"{amount} {from_currency} is equal to {converted_amount:.2f} {to_currency}"
 
 
 # Example exchange rates (amounts are in terms of 1 base currency unit)
