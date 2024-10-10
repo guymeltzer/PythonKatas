@@ -3,6 +3,8 @@ def check_identity(a, b):
     Checks if two objects are identical (i.e., they refer to the same object in memory).
     """
 
+    return a is b
+
 
 x = [1, 2, 3]
 y = x

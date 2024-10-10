@@ -3,8 +3,12 @@ def get_employee_department(employee_dict, employee_id):
     Returns the department of the employee with the given employee_id.
     If the employee_id does not exist in the dictionary, return 'Unknown'.
     """
+    if employee_id < 101 or employee_id > 104:
+        return 'Unknown'
+    else:
+        dep = employees[employee_id]
 
-
+    return dep
 employees = {
     101: 'Sales',
     102: 'Engineering',

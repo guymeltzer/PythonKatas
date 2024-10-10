@@ -3,8 +3,8 @@ def get_movie_review(reviews, movie):
     Returns a review on a given movie. If a movie review is not present, return 'Unknown movie.'.
     """
 
-    # fixme
-    return reviews['movie']
+    mov_rev = reviews.get(movie, "Unknown movie")
+    return mov_rev
 
 
 movie_reviews = {

@@ -5,6 +5,18 @@ def add_passenger(seats, seat_class, passenger_name):
     Next 10 seats are for 'First' Class.
     The remaining seats are for 'Economy' Class.
     """
+    if seat_class == 'Business':
+        seat_range = range(0, 10)
+    elif seat_class == 'First':
+        seat_range = range(10, 20)
+    elif seat_class == 'Economy':
+        seat_range = range(20, len(seats))
+
+    for s in seat_range:
+        if seats[s] is None:
+            seats[s] = passenger_name
+            return True
+    return False
 
 
 aircraft_seats = [None] * 100   # creates list of None of length 100
