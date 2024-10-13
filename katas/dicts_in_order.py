@@ -2,7 +2,8 @@ def dicts_in_order(input_dict):
     """
     Returns a list of tuples containing the key-value pairs from the input dictionary.
     """
-
+    tuples_temp = list(input_dict.items())
+    return tuples_temp
 
 # Example usage
 sample_dict = {"a": 1, "b": 2, "c": 3}

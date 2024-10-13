@@ -4,7 +4,16 @@ def secret_club(keys, values):
     - keys: A list of club member names.
     - values: A list of secret codes.
     """
+    club_dict = {}
+    club_dict = {}
 
+    if len(keys) != len(values):
+        return "Error: The lists must have the same length."
+
+    for i in range(len(keys)):
+        club_dict[keys[i]] = values[i]
+
+    return club_dict
 
 # Example usage
 members = ["Alice", "Bob", "Charlie"]

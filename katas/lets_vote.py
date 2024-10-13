@@ -2,6 +2,10 @@ def lets_vote(votes, candidate):
     """
     Updates the vote counts in the votes dictionary based on the candidate who received a single vote.
     """
+    if candidate in votes:
+        votes[candidate] += 1  # Increment vote count if candidate exists
+    else:
+        votes[candidate] = 1  # Add candidate with initial vote count of 1
 
 
 candidate_state = {'Alice': 0, 'Bob': 0}
@@ -14,7 +18,6 @@ print(candidate_state)  # {'Alice': 2, 'Bob': 0} expected
 
 lets_vote(candidate_state, 'Charlie')
 print(candidate_state)  # {'Alice': 2, 'Bob': 0, 'Charlie': 1} expected
-
 
 """
 To complete this exercise:

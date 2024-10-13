@@ -2,7 +2,8 @@ def ming_the_gap(sentence):
     """
     Returns the number of spaces in the given sentence.
     """
-
+    gap_count = sentence.count(' ')
+    return gap_count
 
 # Example usage
 result_1 = ming_the_gap("I like ice cream")

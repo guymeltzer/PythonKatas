@@ -2,6 +2,8 @@ def they_legit(people, is_legit):
     """
     Returns a list of all legit people based on the 'is_legit' lambda function.
     """
+    legit_people = [person["name"] for person in people if is_legit(person)]
+    return legit_people
 
 
 # Example usage
