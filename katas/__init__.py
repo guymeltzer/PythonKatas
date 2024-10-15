@@ -112,11 +112,16 @@ katas = {
     ]
     ,
     "io_errorhandling": [
-        ('tmp.py', ''),
+        ('file_exceptions.py', ''),
+        ('most_frequent_name.py', ''),
     ]
     ,
     "classes": [
-        ('tmp.py', ''),
+        ('car.py', ''),
+        ('dog.py', ''),
+        ('cache_list.py', ''),
+        ('simple_queue.py', ''),
+        ('tree.py', ''),
     ]
 
 }
