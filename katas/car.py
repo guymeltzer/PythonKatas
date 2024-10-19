@@ -13,16 +13,22 @@ class Car:
     is_rented(): Returns True if the car is currently rented, and False otherwise.
     """
     def __init__(self, model, year):
-        pass
+        self.model = model
+        self.year = year
+        self.rented = False
 
     def rent_car(self):
-        pass
+        if self.is_rented():
+            raise RuntimeError("Car is already rented, you cannot rent.")
+        self.rented = True
 
     def return_car(self):
-        pass
+        if not self.is_rented():
+            raise RuntimeError("You cannot return a car that hasn't been rented.")
+        self.rented = False
 
     def is_rented(self):
-        pass
+        return self.rented
 
 
 if __name__ == "__main__":

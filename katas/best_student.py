@@ -2,7 +2,7 @@ def best_student(grades):
     """
     #This function receives a dict of (student name -> grade) mapping, and returns the student with the highest grade
     """
-    return None
+    return max(grades, key=grades.get)
 
 
 print(best_student({
