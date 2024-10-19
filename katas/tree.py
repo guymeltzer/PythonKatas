@@ -35,7 +35,7 @@ class Node:
         self.children = []
 
     def add_child(self, child):
-        raise NotImplementedError()
+        self.children.append(child)
 
 
 class Tree:
@@ -49,11 +49,22 @@ class Tree:
         """
         self.root = Node(root_node_value)
 
-    def get_node(self, value):
+    def get_node(self, value, current_node = None):
         """
         Returns a pointer to the Node object with the corresponding value
         """
-        raise NotImplementedError()
+        if current_node is None:
+            current_node = self.root
+
+        if current_node.value == value:
+            return current_node
+
+        for child in current_node.children:
+            result = self.get_node(value, child)
+            if result:
+                return result
+
+        return None
 
     def add_node(self, value, parent):
         """
@@ -64,13 +75,27 @@ class Tree:
 
         :return: a pointer to the node object
         """
-        raise NotImplementedError()
+        parent_node = self.get_node(parent)
 
-    def height(self):
+        if parent_node is None:
+            raise ValueError(f"Parent node '{parent_node}' not found.")
+        new_node = Node(value)
+        parent_node.add_child(new_node)
+        return new_node
+
+
+
+    def height(self, node=None):
         """
         Returns the height of the tree
         """
-        raise NotImplementedError()
+        if node is None:
+            node = self.root
+
+        if not node.children:
+            return 1
+
+        return 1 + max(self.height(child) for child in node.children)
 
 
 class BinaryTree(Tree):
@@ -90,10 +115,26 @@ class BinaryTree(Tree):
 
         Returns a pointer to the node
         """
-        raise NotImplementedError()
+        parent_node = self.get_node(parent)
+        if parent_node is None:
+            raise ValueError(f"Parent node '{parent}' not found.")
+
+        if len(parent_node.children) > 0:
+            parent_node.children[0] = Node(value)
+        else:
+            parent_node.add_child(Node(value))
 
     def set_right_node(self, value, parent):
-        raise NotImplementedError()
+        parent_node = self.get_node(parent)
+        if parent_node is None:
+            raise ValueError(f"Parent node '{parent}' not found.")
+
+        if len(parent_node.children) > 1:
+            parent_node.children[1] = Node(value)
+        elif len(parent_node.children) == 1:
+            parent_node.add_child(Node(value))
+        else:
+            parent_node.add_child(Node(value))
 
 
 if __name__ == "__main__":

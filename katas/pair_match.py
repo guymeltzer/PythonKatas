@@ -9,9 +9,16 @@ def pair_match(men, women):
     The function returns a pair of names (tuple) of men and women names,
     where their absolute age differences is the minimal.
     """
+    min_diff = 46564456465645
+    best_pair = None
+    for (man, man_age) in men.items():
+        for (woman, woman_age) in women.items():
+            diff = abs(man_age - woman_age)
+            if diff < min_diff:
+                min_diff = diff
+                best_pair = (man, woman)
 
-
-
+    return best_pair
 
 print(pair_match(
     {
