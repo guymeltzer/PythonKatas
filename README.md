@@ -131,3 +131,9 @@ _Kata_ is a Japanese word (型 or 形) meaning "form". It refers to a detailed c
 - [ ] `tree.py`
 
 
+
+- [ ] `sorted_dict.py`
+- [ ] `youtube.py`
+- [ ] `bash.py`
+- [ ] `request_retry.py`
+- [ ] `request_timeout.py`
