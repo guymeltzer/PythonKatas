@@ -22,19 +22,22 @@ class SortedDict(dict):
 
     def __init__(self):
         super().__init__()
-        pass
+        self._sorted_keys = []
 
     def __setitem__(self, key, value):
-        pass
+        super().__setitem__(key, value)
+        if key not in self._sorted_keys:
+            self._sorted_keys.append(key)
+            self._sorted_keys.sort()
 
     def items(self):
-        raise NotImplemented()
+        return ((key, self[key]) for key in self._sorted_keys)
 
     def values(self):
-        raise NotImplemented()
+        return (self[key] for key in self._sorted_keys)
 
     def keys(self):
-        raise NotImplemented()
+        return iter(self._sorted_keys)
 
 
 if __name__ == '__main__':
@@ -45,4 +48,4 @@ if __name__ == '__main__':
     s_dict['h'] = None
     s_dict['q'] = None
     s_dict['b'] = None
-    print(s_dict.items())
+    print(list(s_dict.items()))

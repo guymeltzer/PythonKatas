@@ -123,6 +123,7 @@ class BinaryTree(Tree):
             parent_node.children[0] = Node(value)
         else:
             parent_node.add_child(Node(value))
+        return parent_node.children[0]
 
     def set_right_node(self, value, parent):
         parent_node = self.get_node(parent)
@@ -135,7 +136,7 @@ class BinaryTree(Tree):
             parent_node.add_child(Node(value))
         else:
             parent_node.add_child(Node(value))
-
+        return parent_node.children[-1]
 
 if __name__ == "__main__":
     # Create tree
