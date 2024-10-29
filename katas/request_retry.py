@@ -1,4 +1,5 @@
 import requests
+import time
 
 
 def request_retry(url, retry_limit=3):
@@ -11,10 +12,26 @@ def request_retry(url, retry_limit=3):
     :param retry_limit: int
     :return: Return the resulting response as text.
     """
-    return None
+    if not url.startswith(('http://', 'https://')):
+        url = 'http://' + url  # Default to HTTP
+    attempt = 0
 
+    while attempt <= retry_limit:
+        try:
+            response = requests.get(url)
+
+            if response.status_code < 500:
+                return response.text
+
+            print(f"Attempt {attempt + 1}: Server error (status code {response.status_code}). Retrying...")
+
+        except requests.RequestException as e:
+            print(f"Attempt {attempt + 1}: Request failed with exception: {e}. Retrying...")
+
+        time.sleep(3)
+        attempt += 1
 
 if __name__ == '__main__':
-    print(request_retry('google.com'))
+    print(request_retry('https://google.com'))
     print(request_retry('sdfsgewcwe4rc34rxwrfxw3r3xrxr.com'))
 

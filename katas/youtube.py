@@ -1,4 +1,5 @@
-from pytube import YouTube
+import os
+from pytubefix import YouTube
 
 
 def youtube_download(url):
@@ -10,7 +11,13 @@ def youtube_download(url):
     :param url: video url
     :return: None
     """
-    return None
+    yt = YouTube(url)
+    audio_stream = yt.streams.filter(only_audio=True).first()
+    output_file = audio_stream.download()
+    base, _ = os.path.splitext(output_file)
+    new_file = f"{base}.mp3"
+    os.rename(output_file, new_file)
+    print(f"Downloaded and saved as: {new_file}")
 
 
 if __name__ == '__main__':

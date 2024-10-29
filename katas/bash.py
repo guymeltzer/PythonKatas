@@ -1,4 +1,5 @@
-
+import subprocess
+import re
 def ping_latency(host, n=10):
     """
     This function takes a hostname or IP address as input,
@@ -12,7 +13,25 @@ def ping_latency(host, n=10):
     :param host: str - Hostname or IP address to ping
     :return: float - Average latency in milliseconds
     """
-    return None
+    result = subprocess.run(
+        ["ping", "-c", str(n), host],
+        capture_output=True,
+        text=True
+    )
+
+    if result.returncode != 0:
+        print("Ping command failed.")
+        return None
+
+    latencies = re.findall(r'time=(\d+.\d+)', result.stdout)
+    latencies = [float(latency) for latency in latencies]
+
+    if latencies:
+        average_latency = sum(latencies) / len(latencies)
+        return average_latency
+    else:
+        print("No latency data found.")
+        return None
 
 
 if __name__ == '__main__':
